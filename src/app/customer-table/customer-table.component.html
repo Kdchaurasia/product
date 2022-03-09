@@ -1,0 +1,46 @@
+<p>customer-table works!</p>
+<!-- <table style="border: solid">
+    <tr>
+        <th>Company Name</th>
+        <th>Company Desc</th>
+        <th>Company start year</th>
+        <th>id</th>
+        <th>Details</th>
+    </tr>
+   <tr *ngFor="let u of users" >
+       <td>{{u.cname}}</td>
+       <td>{{u.cdesc}}</td>
+       <td>{{u.csdet}}</td> 
+       <td>{{u.id}}</td>
+       <td> <button id="view">View Details</button> </td>
+   </tr>
+        
+
+ 
+</table>  -->
+
+
+
+
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th>Company Name</th>
+            <th>Company Desc</th>
+            <th>Company start year</th>
+            
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users" >
+            <th>{{u.cname}}</th>
+            <td>{{u.cdesc}}</td>
+            <td>{{u.csdet}}</td> 
+          
+            <td><button (click)="show(u)">View Details</button>  </td>
+        </tr>
+             
+    </tbody>
+  </table>
+  <app-customer-details [pData]="select"></app-customer-details> 
